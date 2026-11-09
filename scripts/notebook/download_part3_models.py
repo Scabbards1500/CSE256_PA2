@@ -5,7 +5,7 @@ os.environ.setdefault('HF_HUB_DISABLE_XET', '1')
 os.environ.setdefault('HF_HUB_DISABLE_SYMLINKS_WARNING', '1')
 from huggingface_hub import snapshot_download
 
-root = Path(__file__).resolve().parents[1]
+root = Path(__file__).resolve().parents[2]
 for revision in ['step143000', 'step512', 'step1000', 'step8000', 'step0', 'step32000']:
     print(f'Downloading {revision}', flush=True)
     path = snapshot_download(

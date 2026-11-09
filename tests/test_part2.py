@@ -6,8 +6,8 @@ import unittest
 import torch
 from torch.nn import functional as F
 
-from transformer import DecoderLanguageModel
-from main import compute_perplexity
+from cse256_pa2.transformer import DecoderLanguageModel
+from cse256_pa2.train import compute_perplexity
 
 
 class DecoderTests(unittest.TestCase):

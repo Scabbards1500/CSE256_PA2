@@ -9,7 +9,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 run = ROOT / 'outputs' / 'part2'
 report = ROOT / 'report'
 metrics = json.loads((run / 'metrics.json').read_text(encoding='utf-8'))
@@ -77,5 +77,5 @@ if analysis_path.exists():
         rows.append(f"{label} & {100*c['oov_rate']:.2f} & {100*c['absent_from_lm_train_rate']:.2f} " + r'\\')
     rows += [r'\bottomrule', r'\end{tabular}']
     (generated / 'part2_corpus_table.tex').write_text('\n'.join(rows) + '\n', encoding='utf-8')
-runpy.run_path(str(ROOT / 'scripts/build_decoder_attention_figure.py'), run_name='__main__')
+runpy.run_path(str(ROOT / 'scripts/report/build_decoder_attention_figure.py'), run_name='__main__')
 print('Regenerated report/generated/part2_*.tex and report/figures/part2_*.png')

@@ -10,9 +10,9 @@ import sys
 import numpy as np
 from nltk.tokenize import word_tokenize
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
-from tokenizer import SimpleTokenizer
+from cse256_pa2.tokenizer import SimpleTokenizer
 
 
 def analyze(data_dir):

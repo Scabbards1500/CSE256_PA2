@@ -6,17 +6,17 @@ import math
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 if (ROOT / '.local_packages').is_dir():
     sys.path.insert(0, str(ROOT / '.local_packages'))
 
 import torch
 from torch.utils.data import DataLoader
-from dataset import LanguageModelingDataset
-from main import load_texts
-from tokenizer import SimpleTokenizer
-from transformer import DecoderLanguageModel
+from cse256_pa2.dataset import LanguageModelingDataset
+from cse256_pa2.train import load_texts
+from cse256_pa2.tokenizer import SimpleTokenizer
+from cse256_pa2.transformer import DecoderLanguageModel
 
 
 def sha256(path):

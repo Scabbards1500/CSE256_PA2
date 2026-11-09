@@ -16,7 +16,7 @@ from matplotlib.ticker import FuncFormatter, NullLocator
 from transformers import AutoTokenizer
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "report" / "figures"
 DATA = json.loads((ROOT / "outputs" / "part3" / "results.json").read_text(encoding="utf-8"))
 

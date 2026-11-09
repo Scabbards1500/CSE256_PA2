@@ -5,8 +5,8 @@ import unittest
 import torch
 from torch.nn import functional as F
 
-from main import collate_batch, compute_classifier_accuracy
-from transformer import MultiHeadSelfAttention, SpeakerClassifier, TransformerEncoder
+from cse256_pa2.train import collate_batch, compute_classifier_accuracy
+from cse256_pa2.transformer import MultiHeadSelfAttention, SpeakerClassifier, TransformerEncoder
 
 
 class EncoderTests(unittest.TestCase):

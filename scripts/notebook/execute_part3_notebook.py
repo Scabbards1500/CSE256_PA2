@@ -7,7 +7,7 @@ import nbformat
 from nbclient import NotebookClient
 from jupyter_client import KernelManager
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 path = ROOT / 'part3_pythia.ipynb'
 nb = nbformat.read(path, as_version=4)
 print('Preparing notebook execution with', sys.executable, flush=True)

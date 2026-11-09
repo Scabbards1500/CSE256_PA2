@@ -9,7 +9,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 run = ROOT / 'outputs' / 'part1'
 report = ROOT / 'report'
 metrics = json.loads((run / 'metrics.json').read_text(encoding='utf-8'))
@@ -59,5 +59,5 @@ fig.savefig(figures / 'part1_accuracy.png', dpi=300)
 plt.close(fig)
 for name in ('sentence1_layer1_head1.png', 'sentence2_layer1_head1.png'):
     shutil.copy2(run / 'figures' / name, figures / ('part1_' + name))
-runpy.run_path(str(ROOT / 'scripts/build_encoder_attention_figure.py'), run_name='__main__')
+runpy.run_path(str(ROOT / 'scripts/report/build_encoder_attention_figure.py'), run_name='__main__')
 print('Regenerated report/generated/part1_*.tex and report/figures/part1_*.png')

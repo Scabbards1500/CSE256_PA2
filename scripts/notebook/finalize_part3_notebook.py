@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 import nbformat
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 path = ROOT / 'part3_pythia.ipynb'
 nb = nbformat.read(path, 4)
 r = json.loads((ROOT / 'outputs/part3/results.json').read_text())

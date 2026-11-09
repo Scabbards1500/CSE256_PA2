@@ -3,7 +3,7 @@ import json
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 if (ROOT / '.local_packages').is_dir():
     sys.path.insert(0, str(ROOT / '.local_packages'))
@@ -12,9 +12,9 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
-from main import load_texts
-from tokenizer import SimpleTokenizer
-from transformer import SpeakerClassifier, TransformerEncoder
+from cse256_pa2.train import load_texts
+from cse256_pa2.tokenizer import SimpleTokenizer
+from cse256_pa2.transformer import SpeakerClassifier, TransformerEncoder
 
 run = ROOT / 'outputs/part1'
 saved = torch.load(run / 'model.pt', map_location='cpu')

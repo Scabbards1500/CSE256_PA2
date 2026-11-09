@@ -5,7 +5,7 @@ import json
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 if (ROOT / ".local_packages").is_dir():
     sys.path.insert(0, str(ROOT / ".local_packages"))
@@ -13,7 +13,7 @@ if (ROOT / ".local_packages").is_dir():
 import torch
 from nltk.tokenize import word_tokenize
 
-from transformer import DecoderLanguageModel
+from cse256_pa2.transformer import DecoderLanguageModel
 
 
 def main():

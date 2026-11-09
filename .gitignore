@@ -2,9 +2,12 @@
 .local_packages/
 __pycache__/
 *.pyc
+
 # Keep the report and its exported PDFs local.
 /report/
 /output/
+# Notebook HTML exports embed CSS/JS/images and are reproducible locally.
+/outputs/**/*.html
 
 # Temporary rendering/validation files and OS metadata.
 /tmp/

@@ -2,7 +2,7 @@
 from pathlib import Path
 import nbformat as nbf
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 path = ROOT / 'part3_pythia.ipynb'
 if path.exists():
     raise SystemExit('Notebook already exists; preserve its executed outputs.')

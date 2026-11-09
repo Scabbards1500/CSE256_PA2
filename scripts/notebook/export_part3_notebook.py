@@ -1,7 +1,7 @@
 """Export the executed Part 3 notebook, retaining code, prose and cell outputs.
 
 Example (from the project root):
-    .part3_env/Scripts/python.exe scripts/export_part3_notebook.py
+    .part3_env/Scripts/python.exe scripts/notebook/export_part3_notebook.py
 
 This script does not execute or modify the source notebook. It prints the
 source SHA256 so the exported artifacts can be tied to that saved run.
@@ -20,7 +20,7 @@ from playwright.sync_api import sync_playwright
 from traitlets.config import Config
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 PRINT_CSS = r"""
 <style id="part3-print-layout">
 @page { size: A4; margin: 15mm 13mm 16mm 13mm; }

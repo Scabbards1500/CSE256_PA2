@@ -6,7 +6,7 @@ import json
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 if (ROOT / ".local_packages").is_dir():
     sys.path.insert(0, str(ROOT / ".local_packages"))
@@ -18,10 +18,10 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
-from dataset import SpeechesClassificationDataset
-from main import collate_batch, load_texts
-from tokenizer import SimpleTokenizer
-from transformer import SpeakerClassifier, TransformerEncoder
+from cse256_pa2.dataset import SpeechesClassificationDataset
+from cse256_pa2.train import collate_batch, load_texts
+from cse256_pa2.tokenizer import SimpleTokenizer
+from cse256_pa2.transformer import SpeakerClassifier, TransformerEncoder
 
 
 # Verified against CSE256_PA2_FA26.pdf, page 2, Preliminaries / Data.
