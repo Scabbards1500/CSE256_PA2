@@ -1,0 +1,9 @@
+{
+  "notebook_sha256": "de557eaadc5ec7c908630bebc9692fe1226b9cb7bf0f69a0808ad20d46b9464c",
+  "notebook_pdf_sha256": "1b9a164e55159ed34fe74e95cb820b158cbb457faa15c8a25364b2e01b2e3722",
+  "results_sha256": "70612279234d1a28e88fd05b2091647049c9b7ff51e9773d08370c2f50abd2d1",
+  "executed_code_cells": 8,
+  "embedded_pngs": 5,
+  "restoration_checks": 56,
+  "status": "passed"
+}

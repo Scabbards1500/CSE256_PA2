@@ -1,0 +1,167 @@
+{
+  "checkpoint": "D:\\python\\CSE256_PA2\\outputs\\part1\\model.pt",
+  "checkpoint_sha256": "b213796ec1c2d5a3e5cdb5321b3642dcb7912d3ca6b6734039f6e9f550272814",
+  "test_file": "D:\\python\\CSE256_PA2\\speechesdataset\\test_CLS.tsv",
+  "test_sha256": "31277b7d67cff8ad717c9f43c05810c6b78feb67f04472bd7aa20e71eb2e0da8",
+  "label_mapping_source": "CSE256_PA2_FA26.pdf, page 2, Preliminaries / Data",
+  "label_mapping": {
+    "0": "Barack Obama",
+    "1": "George W. Bush",
+    "2": "George H. W. Bush"
+  },
+  "tokenizer_matches_saved_vocabulary": true,
+  "vocabulary_sha256": "0fed520836df44ebf0c6904239a75b91fb584646693ed07c69844fd3d088b230",
+  "config": {
+    "seed": 42,
+    "batch_size": 16,
+    "block_size": 32,
+    "learning_rate": 0.001,
+    "n_embd": 64,
+    "n_head": 2,
+    "n_layer": 4,
+    "encoder_ffn_hidden": 256,
+    "classifier_hidden": 100,
+    "epochs": 15,
+    "dropout": 0.0,
+    "optimizer": "Adam",
+    "device": "cuda"
+  },
+  "torch_version": "2.2.2+cu121",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "dtype": "torch.float32",
+  "eval_mode": true,
+  "gradient_tracking": false,
+  "tf32_enabled": false,
+  "total_examples": 750,
+  "correct_predictions": 642,
+  "total_errors": 108,
+  "accuracy_percent": 85.6,
+  "confusion_orientation": "Rows = actual labels; columns = predicted labels; label order [0,1,2].",
+  "confusion_counts": [
+    [
+      225,
+      15,
+      10
+    ],
+    [
+      15,
+      198,
+      37
+    ],
+    [
+      12,
+      19,
+      219
+    ]
+  ],
+  "confusion_row_percent": [
+    [
+      90.0,
+      6.0,
+      4.0
+    ],
+    [
+      6.0,
+      79.2,
+      14.8
+    ],
+    [
+      4.8,
+      7.6,
+      87.6
+    ]
+  ],
+  "per_class": [
+    {
+      "label": 0,
+      "speaker": "Barack Obama",
+      "actual_count": 250,
+      "actual_percent": 33.333333333333336,
+      "predicted_count": 252,
+      "predicted_percent": 33.6,
+      "correct_count": 225,
+      "error_count": 25,
+      "recall_percent": 90.0
+    },
+    {
+      "label": 1,
+      "speaker": "George W. Bush",
+      "actual_count": 250,
+      "actual_percent": 33.333333333333336,
+      "predicted_count": 232,
+      "predicted_percent": 30.933333333333334,
+      "correct_count": 198,
+      "error_count": 52,
+      "recall_percent": 79.2
+    },
+    {
+      "label": 2,
+      "speaker": "George H. W. Bush",
+      "actual_count": 250,
+      "actual_percent": 33.333333333333336,
+      "predicted_count": 266,
+      "predicted_percent": 35.46666666666667,
+      "correct_count": 219,
+      "error_count": 31,
+      "recall_percent": 87.6
+    }
+  ],
+  "error_directions": [
+    {
+      "actual_label": 1,
+      "actual_speaker": "George W. Bush",
+      "predicted_label": 2,
+      "predicted_speaker": "George H. W. Bush",
+      "count": 37,
+      "percent_of_actual_class": 14.8,
+      "percent_of_all_errors": 34.25925925925926
+    },
+    {
+      "actual_label": 2,
+      "actual_speaker": "George H. W. Bush",
+      "predicted_label": 1,
+      "predicted_speaker": "George W. Bush",
+      "count": 19,
+      "percent_of_actual_class": 7.6,
+      "percent_of_all_errors": 17.59259259259259
+    },
+    {
+      "actual_label": 0,
+      "actual_speaker": "Barack Obama",
+      "predicted_label": 1,
+      "predicted_speaker": "George W. Bush",
+      "count": 15,
+      "percent_of_actual_class": 6.0,
+      "percent_of_all_errors": 13.88888888888889
+    },
+    {
+      "actual_label": 1,
+      "actual_speaker": "George W. Bush",
+      "predicted_label": 0,
+      "predicted_speaker": "Barack Obama",
+      "count": 15,
+      "percent_of_actual_class": 6.0,
+      "percent_of_all_errors": 13.88888888888889
+    },
+    {
+      "actual_label": 2,
+      "actual_speaker": "George H. W. Bush",
+      "predicted_label": 0,
+      "predicted_speaker": "Barack Obama",
+      "count": 12,
+      "percent_of_actual_class": 4.8,
+      "percent_of_all_errors": 11.11111111111111
+    },
+    {
+      "actual_label": 0,
+      "actual_speaker": "Barack Obama",
+      "predicted_label": 2,
+      "predicted_speaker": "George H. W. Bush",
+      "count": 10,
+      "percent_of_actual_class": 4.0,
+      "percent_of_all_errors": 9.25925925925926
+    }
+  ],
+  "source_checkpoint_metrics_and_vocabulary_unchanged": true
+}

@@ -1,0 +1,135 @@
+{
+  "checkpoint_sha256": "b1279e8efd619fc2cffdbd8a554a23a1bec010cb0f3e410e0c1adf8957896146",
+  "training_corpus_sha256": "aff1d88fad90db8cedfe8918a9099ffdfe622641a2a8c6e25dac1f7eda199b1a",
+  "device": "cuda",
+  "torch_version": "2.2.2+cu121",
+  "protocol": "All stride-one windows; every next-token target in each 32-token window, conditioned on the observed prefix.",
+  "interpretation": "Top-1 mismatch is against the observed corpus target, not a judgment that another continuation is linguistically invalid. OOV targets are the shared unknown ID, not their original spellings.",
+  "group_weighting": "Groups partition target occurrences, not raw corpus tokens; aggregate NLL is target-weighted, not an average of group perplexities.",
+  "source_checkpoint_metrics_and_vocabulary_unchanged": true,
+  "corpora": {
+    "obama": {
+      "source_sha256": "6cb3bb657ae40cab1cb8f3f38f391dbdcc80a9b21b577d5fc1ea4ba86901bed2",
+      "windows": 5502,
+      "target_occurrences": 176064,
+      "correct_top1": 20603,
+      "errors_top1": 155461,
+      "top1_accuracy_percent": 11.701994729189385,
+      "mean_nll_nats": 5.916009542253986,
+      "perplexity": 370.92858182381707,
+      "original_report_perplexity": 370.9285750713248,
+      "perplexity_matches_report": true,
+      "groups": {
+        "seen_in_lm_training": {
+          "target_occurrences": 162620,
+          "target_share_percent": 92.3641403126136,
+          "correct_top1": 20603,
+          "errors_top1": 142017,
+          "top1_accuracy_percent": 12.66941335629074,
+          "mean_nll_nats": 5.350955076184884,
+          "share_of_total_nll_percent": 83.54218530805981
+        },
+        "in_vocabulary_unseen_in_lm_training": {
+          "target_occurrences": 9839,
+          "target_share_percent": 5.588308796801163,
+          "correct_top1": 0,
+          "errors_top1": 9839,
+          "top1_accuracy_percent": 0.0,
+          "mean_nll_nats": 12.934104851971725,
+          "share_of_total_nll_percent": 12.21765641295497
+        },
+        "oov_encoded_as_unk": {
+          "target_occurrences": 3605,
+          "target_share_percent": 2.0475508905852418,
+          "correct_top1": 0,
+          "errors_top1": 3605,
+          "top1_accuracy_percent": 0.0,
+          "mean_nll_nats": 12.25113229394455,
+          "share_of_total_nll_percent": 4.240158278985217
+        }
+      }
+    },
+    "wbush": {
+      "source_sha256": "1281773860075b12727f9f581940c028074d05f3efbf99bbfcc9c7c472d4dbd5",
+      "windows": 4748,
+      "target_occurrences": 151936,
+      "correct_top1": 17049,
+      "errors_top1": 134887,
+      "top1_accuracy_percent": 11.221172072451559,
+      "mean_nll_nats": 6.177374547362334,
+      "perplexity": 481.7255470233115,
+      "original_report_perplexity": 481.7255441065724,
+      "perplexity_matches_report": true,
+      "groups": {
+        "seen_in_lm_training": {
+          "target_occurrences": 137423,
+          "target_share_percent": 90.44795176916597,
+          "correct_top1": 17049,
+          "errors_top1": 120374,
+          "top1_accuracy_percent": 12.406220210590657,
+          "mean_nll_nats": 5.476567027485072,
+          "share_of_total_nll_percent": 80.18686038295681
+        },
+        "in_vocabulary_unseen_in_lm_training": {
+          "target_occurrences": 11195,
+          "target_share_percent": 7.36823399326032,
+          "correct_top1": 0,
+          "errors_top1": 11195,
+          "top1_accuracy_percent": 0.0,
+          "mean_nll_nats": 13.008165054610927,
+          "share_of_total_nll_percent": 15.515847907627819
+        },
+        "oov_encoded_as_unk": {
+          "target_occurrences": 3318,
+          "target_share_percent": 2.1838142375737153,
+          "correct_top1": 0,
+          "errors_top1": 3318,
+          "top1_accuracy_percent": 0.0,
+          "mean_nll_nats": 12.155786866664599,
+          "share_of_total_nll_percent": 4.297291709415378
+        }
+      }
+    },
+    "hbush": {
+      "source_sha256": "a0592374b7cd47a6417a311892a4b8a59f35cbe054cbaf96c06e50e904c8451f",
+      "windows": 4696,
+      "target_occurrences": 150272,
+      "correct_top1": 17233,
+      "errors_top1": 133039,
+      "top1_accuracy_percent": 11.467871592844974,
+      "mean_nll_nats": 6.0178659682463955,
+      "perplexity": 410.7012104512744,
+      "original_report_perplexity": 410.7012404239696,
+      "perplexity_matches_report": true,
+      "groups": {
+        "seen_in_lm_training": {
+          "target_occurrences": 137073,
+          "target_share_percent": 91.2165939097104,
+          "correct_top1": 17233,
+          "errors_top1": 119840,
+          "top1_accuracy_percent": 12.572133096962933,
+          "mean_nll_nats": 5.374845327698121,
+          "share_of_total_nll_percent": 81.46992408456877
+        },
+        "in_vocabulary_unseen_in_lm_training": {
+          "target_occurrences": 9743,
+          "target_share_percent": 6.4835764480408855,
+          "correct_top1": 0,
+          "errors_top1": 9743,
+          "top1_accuracy_percent": 0.0,
+          "mean_nll_nats": 12.938106924677781,
+          "share_of_total_nll_percent": 13.939360860095674
+        },
+        "oov_encoded_as_unk": {
+          "target_occurrences": 3456,
+          "target_share_percent": 2.299829642248722,
+          "correct_top1": 0,
+          "errors_top1": 3456,
+          "top1_accuracy_percent": 0.0,
+          "mean_nll_nats": 12.012327954173088,
+          "share_of_total_nll_percent": 4.590715055335558
+        }
+      }
+    }
+  }
+}

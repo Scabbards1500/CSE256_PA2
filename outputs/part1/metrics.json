@@ -1,0 +1,159 @@
+{
+  "config": {
+    "seed": 42,
+    "batch_size": 16,
+    "block_size": 32,
+    "learning_rate": 0.001,
+    "n_embd": 64,
+    "n_head": 2,
+    "n_layer": 4,
+    "encoder_ffn_hidden": 256,
+    "classifier_hidden": 100,
+    "epochs": 15,
+    "dropout": 0.0,
+    "optimizer": "Adam",
+    "device": "cuda"
+  },
+  "torch_version": "2.2.2+cu121",
+  "device_name": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "vocab_size": 5755,
+  "train_examples": 2092,
+  "test_examples": 750,
+  "test_file": "test_CLS.tsv",
+  "encoder_parameters": 569664,
+  "classifier_parameters": 6803,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.0671427284098491,
+      "train_accuracy": 51.81644359464627,
+      "test_accuracy": 43.06666666666667
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.012829586151225,
+      "train_accuracy": 57.170172084130016,
+      "test_accuracy": 48.53333333333333
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.9235763831302723,
+      "train_accuracy": 66.63479923518165,
+      "test_accuracy": 59.6
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.8011268477594875,
+      "train_accuracy": 73.90057361376672,
+      "test_accuracy": 62.666666666666664
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.6418634473023861,
+      "train_accuracy": 83.98661567877629,
+      "test_accuracy": 71.86666666666666
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.4770682342991546,
+      "train_accuracy": 87.95411089866157,
+      "test_accuracy": 76.4
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.33085811465807674,
+      "train_accuracy": 94.45506692160612,
+      "test_accuracy": 81.46666666666667
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.22278045360746848,
+      "train_accuracy": 95.79349904397705,
+      "test_accuracy": 82.13333333333334
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.17652080410354223,
+      "train_accuracy": 97.4187380497132,
+      "test_accuracy": 82.93333333333334
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.11511076302632661,
+      "train_accuracy": 98.23135755258126,
+      "test_accuracy": 84.13333333333334
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.0830647521037929,
+      "train_accuracy": 94.31166347992352,
+      "test_accuracy": 81.73333333333333
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.07910656468340874,
+      "train_accuracy": 98.7093690248566,
+      "test_accuracy": 84.8
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.05443957062877971,
+      "train_accuracy": 99.1395793499044,
+      "test_accuracy": 85.06666666666666
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.05347715534606368,
+      "train_accuracy": 99.37858508604207,
+      "test_accuracy": 85.46666666666667
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.0364408192349897,
+      "train_accuracy": 99.76099426386233,
+      "test_accuracy": 85.6
+    }
+  ],
+  "final_test_accuracy": 85.6,
+  "attention_checks": [
+    {
+      "sentence": "They have not served a Red America or a Blue America",
+      "tokens": [
+        "They",
+        "have",
+        "not",
+        "served",
+        "a",
+        "Red",
+        "America",
+        "or",
+        "a",
+        "Blue",
+        "America"
+      ],
+      "max_row_sum_error": 1.1920928955078125e-07,
+      "layers_checked": 4,
+      "heads_per_layer": 2,
+      "padded_key_attention": 0.0
+    },
+    {
+      "sentence": "We must never give up on the American people.",
+      "tokens": [
+        "We",
+        "must",
+        "never",
+        "give",
+        "up",
+        "on",
+        "the",
+        "American",
+        "people",
+        "."
+      ],
+      "max_row_sum_error": 2.384185791015625e-07,
+      "layers_checked": 4,
+      "heads_per_layer": 2,
+      "padded_key_attention": 0.0
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "config": {
+    "seed": 42,
+    "batch_size": 16,
+    "block_size": 32,
+    "learning_rate": 0.001,
+    "n_embd": 64,
+    "n_head": 2,
+    "n_layer": 4,
+    "decoder_ffn_hidden": 100,
+    "max_iters": 500,
+    "eval_interval": 100,
+    "train_eval_max_batches": 200,
+    "test_eval": "all stride-1 windows",
+    "dropout": 0.0,
+    "optimizer": "Adam",
+    "device": "cuda",
+    "weight_tying": false
+  },
+  "torch_version": "2.2.2+cu121",
+  "device_name": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "vocab_size": 5755,
+  "decoder_parameters": 489168,
+  "lm_head_parameters": 374075,
+  "total_parameters": 863243,
+  "training_tokens_processed": 256000,
+  "corpus_tokens": {
+    "train": 32071,
+    "obama": 5534,
+    "wbush": 4780,
+    "hbush": 4728
+  },
+  "evaluation_windows": {
+    "train": 3200,
+    "obama": 5502,
+    "wbush": 4748,
+    "hbush": 4696
+  },
+  "evaluation_target_tokens": {
+    "train": 102400,
+    "obama": 176064,
+    "wbush": 151936,
+    "hbush": 150272
+  },
+  "history": [
+    {
+      "step": 100,
+      "interval_train_loss": 6.880445146560669,
+      "train_perplexity": 589.3922300914875,
+      "obama_perplexity": 688.841424790137,
+      "wbush_perplexity": 804.5030955624779,
+      "hbush_perplexity": 723.4719199451209
+    },
+    {
+      "step": 200,
+      "interval_train_loss": 6.276107993125915,
+      "train_perplexity": 454.3961556444288,
+      "obama_perplexity": 572.2454191270501,
+      "wbush_perplexity": 681.2158015856359,
+      "hbush_perplexity": 604.7900428528853
+    },
+    {
+      "step": 300,
+      "interval_train_loss": 5.940867033004761,
+      "train_perplexity": 312.80610989515174,
+      "obama_perplexity": 457.31791077283094,
+      "wbush_perplexity": 566.1333545346833,
+      "hbush_perplexity": 491.5287520143626
+    },
+    {
+      "step": 400,
+      "interval_train_loss": 5.570469455718994,
+      "train_perplexity": 225.1430639935928,
+      "obama_perplexity": 394.83874413620856,
+      "wbush_perplexity": 510.6939733589389,
+      "hbush_perplexity": 438.1713063438047
+    },
+    {
+      "step": 500,
+      "interval_train_loss": 5.287923231124878,
+      "train_perplexity": 171.69481178147925,
+      "obama_perplexity": 370.9285750713248,
+      "wbush_perplexity": 481.7255441065724,
+      "hbush_perplexity": 410.7012404239696
+    }
+  ],
+  "attention_checks": [
+    {
+      "sentence": "They have not served a Red America or a Blue America",
+      "tokens": [
+        "They",
+        "have",
+        "not",
+        "served",
+        "a",
+        "Red",
+        "America",
+        "or",
+        "a",
+        "Blue",
+        "America"
+      ],
+      "max_row_sum_error": 1.1920928955078125e-07,
+      "layers_checked": 4,
+      "heads_per_layer": 2,
+      "padded_key_attention": 0.0,
+      "max_future_attention": 0.0
+    },
+    {
+      "sentence": "We must never give up on the American people.",
+      "tokens": [
+        "We",
+        "must",
+        "never",
+        "give",
+        "up",
+        "on",
+        "the",
+        "American",
+        "people",
+        "."
+      ],
+      "max_row_sum_error": 1.1920928955078125e-07,
+      "layers_checked": 4,
+      "heads_per_layer": 2,
+      "padded_key_attention": 0.0,
+      "max_future_attention": 0.0
+    }
+  ]
+}

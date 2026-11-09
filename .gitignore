@@ -1,0 +1,13 @@
+# Local/generated files; keep these out of a source-code submission.
+.local_packages/
+__pycache__/
+*.pyc
+# Keep the report and its exported PDFs local.
+/report/
+/output/
+
+# Temporary rendering/validation files and OS metadata.
+/tmp/
+.DS_Store
+.part3_env/
+.cache/

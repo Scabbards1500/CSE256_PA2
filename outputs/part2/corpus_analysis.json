@@ -1,0 +1,614 @@
+{
+  "method": {
+    "tokenizer": "Provided NLTK word_tokenize, case sensitive and punctuation retained. Vocabulary built from sorted train_* files only, IDs assigned in sorted token order.",
+    "vocab_size": 5755,
+    "js_divergence": "Natural logarithms; unsmoothed normalized unigram histograms over encoded token IDs; equal mixture of training and test distributions.",
+    "unigram_cross_entropy": "Natural logarithms; add-one smoothed train_LM token counts over all non-padding vocabulary IDs (including <unk>), evaluated on each raw corpus token once.",
+    "window_protocol": "Starter dataset: N-32 overlapping windows per corpus, 32 next-token targets per window. Token counts below count each raw corpus token once; corresponding sliding-window target counts also reported."
+  },
+  "corpora": {
+    "train_LM.txt": {
+      "tokens": 32071,
+      "unique_surface_tokens": 4524,
+      "oov_tokens": 0,
+      "oov_rate": 0.0,
+      "oov_unique_surface_tokens": 0,
+      "absent_from_lm_train_tokens": 0,
+      "absent_from_lm_train_rate": 0.0,
+      "known_vocab_but_absent_from_lm_train_tokens": 0,
+      "known_vocab_but_absent_from_lm_train_rate": 0.0,
+      "windows_32": 32039,
+      "window_target_occurrences": 1025248,
+      "window_oov_target_occurrences": 0,
+      "js_divergence_from_lm_train_nats": 0.0,
+      "add_one_unigram_cross_entropy_nats": 6.372486608410566,
+      "add_one_unigram_perplexity": 585.5119591779056,
+      "top_20_surface_tokens": [
+        {
+          "token": ",",
+          "count": 1562,
+          "rate": 0.048704437030338936
+        },
+        {
+          "token": ".",
+          "count": 1523,
+          "rate": 0.047488385145458514
+        },
+        {
+          "token": "the",
+          "count": 1318,
+          "rate": 0.04109631754544604
+        },
+        {
+          "token": "and",
+          "count": 949,
+          "rate": 0.02959059586542359
+        },
+        {
+          "token": "of",
+          "count": 878,
+          "rate": 0.027376757818590003
+        },
+        {
+          "token": "to",
+          "count": 835,
+          "rate": 0.026035982663465435
+        },
+        {
+          "token": "a",
+          "count": 495,
+          "rate": 0.015434504692713043
+        },
+        {
+          "token": "that",
+          "count": 482,
+          "rate": 0.01502915406441957
+        },
+        {
+          "token": "in",
+          "count": 457,
+          "rate": 0.014249633625393658
+        },
+        {
+          "token": "our",
+          "count": 388,
+          "rate": 0.012098157213682143
+        },
+        {
+          "token": "we",
+          "count": 366,
+          "rate": 0.011412179227339342
+        },
+        {
+          "token": "I",
+          "count": 342,
+          "rate": 0.010663839605874467
+        },
+        {
+          "token": "is",
+          "count": 294,
+          "rate": 0.009167160362944717
+        },
+        {
+          "token": "for",
+          "count": 286,
+          "rate": 0.008917713822456425
+        },
+        {
+          "token": "'s",
+          "count": 238,
+          "rate": 0.007421034579526675
+        },
+        {
+          "token": "you",
+          "count": 214,
+          "rate": 0.006672694958061801
+        },
+        {
+          "token": "it",
+          "count": 207,
+          "rate": 0.006454429235134545
+        },
+        {
+          "token": "have",
+          "count": 202,
+          "rate": 0.006298525147329363
+        },
+        {
+          "token": "not",
+          "count": 199,
+          "rate": 0.006204982694646253
+        },
+        {
+          "token": "this",
+          "count": 194,
+          "rate": 0.006049078606841072
+        }
+      ],
+      "top_10_oov_surface_tokens": []
+    },
+    "test_LM_obama.txt": {
+      "tokens": 5534,
+      "unique_surface_tokens": 1525,
+      "oov_tokens": 113,
+      "oov_rate": 0.020419226599204914,
+      "oov_unique_surface_tokens": 112,
+      "absent_from_lm_train_tokens": 421,
+      "absent_from_lm_train_rate": 0.07607517166606433,
+      "known_vocab_but_absent_from_lm_train_tokens": 308,
+      "known_vocab_but_absent_from_lm_train_rate": 0.05565594506685941,
+      "windows_32": 5502,
+      "window_target_occurrences": 176064,
+      "window_oov_target_occurrences": 3605,
+      "js_divergence_from_lm_train_nats": 0.12321770430622825,
+      "add_one_unigram_cross_entropy_nats": 6.496312227843283,
+      "add_one_unigram_perplexity": 662.6932595463095,
+      "top_20_surface_tokens": [
+        {
+          "token": ",",
+          "count": 277,
+          "rate": 0.050054210336104084
+        },
+        {
+          "token": ".",
+          "count": 247,
+          "rate": 0.0446331767256957
+        },
+        {
+          "token": "the",
+          "count": 198,
+          "rate": 0.03577882182869534
+        },
+        {
+          "token": "and",
+          "count": 155,
+          "rate": 0.028008673653776652
+        },
+        {
+          "token": "to",
+          "count": 143,
+          "rate": 0.0258402602096133
+        },
+        {
+          "token": "of",
+          "count": 126,
+          "rate": 0.022768341163715216
+        },
+        {
+          "token": "that",
+          "count": 101,
+          "rate": 0.01825081315504156
+        },
+        {
+          "token": "a",
+          "count": 96,
+          "rate": 0.01734730755330683
+        },
+        {
+          "token": "our",
+          "count": 86,
+          "rate": 0.01554029634983737
+        },
+        {
+          "token": "we",
+          "count": 84,
+          "rate": 0.015178894109143477
+        },
+        {
+          "token": "in",
+          "count": 77,
+          "rate": 0.013913986266714853
+        },
+        {
+          "token": "is",
+          "count": 61,
+          "rate": 0.011022768341163716
+        },
+        {
+          "token": "I",
+          "count": 52,
+          "rate": 0.0093964582580412
+        },
+        {
+          "token": "it",
+          "count": 43,
+          "rate": 0.007770148174918685
+        },
+        {
+          "token": "for",
+          "count": 39,
+          "rate": 0.0070473436935308996
+        },
+        {
+          "token": "'s",
+          "count": 39,
+          "rate": 0.0070473436935308996
+        },
+        {
+          "token": "you",
+          "count": 39,
+          "rate": 0.0070473436935308996
+        },
+        {
+          "token": "have",
+          "count": 39,
+          "rate": 0.0070473436935308996
+        },
+        {
+          "token": "as",
+          "count": 37,
+          "rate": 0.006685941452837007
+        },
+        {
+          "token": "are",
+          "count": 36,
+          "rate": 0.006505240332490061
+        }
+      ],
+      "top_10_oov_surface_tokens": [
+        {
+          "token": "hospitality",
+          "count": 2
+        },
+        {
+          "token": "writing",
+          "count": 1
+        },
+        {
+          "token": "speeches",
+          "count": 1
+        },
+        {
+          "token": "suffragettes",
+          "count": 1
+        },
+        {
+          "token": "grabs",
+          "count": 1
+        },
+        {
+          "token": "proceed",
+          "count": 1
+        },
+        {
+          "token": "rectitude",
+          "count": 1
+        },
+        {
+          "token": "chase",
+          "count": 1
+        },
+        {
+          "token": "imagination",
+          "count": 1
+        },
+        {
+          "token": "strive",
+          "count": 1
+        }
+      ]
+    },
+    "test_LM_wbush.txt": {
+      "tokens": 4780,
+      "unique_surface_tokens": 1412,
+      "oov_tokens": 105,
+      "oov_rate": 0.021966527196652718,
+      "oov_unique_surface_tokens": 103,
+      "absent_from_lm_train_tokens": 456,
+      "absent_from_lm_train_rate": 0.09539748953974896,
+      "known_vocab_but_absent_from_lm_train_tokens": 351,
+      "known_vocab_but_absent_from_lm_train_rate": 0.07343096234309623,
+      "windows_32": 4748,
+      "window_target_occurrences": 151936,
+      "window_oov_target_occurrences": 3318,
+      "js_divergence_from_lm_train_nats": 0.15425282871149948,
+      "add_one_unigram_cross_entropy_nats": 6.606578391087118,
+      "add_one_unigram_perplexity": 739.9468735249213,
+      "top_20_surface_tokens": [
+        {
+          "token": ".",
+          "count": 249,
+          "rate": 0.05209205020920502
+        },
+        {
+          "token": ",",
+          "count": 218,
+          "rate": 0.04560669456066946
+        },
+        {
+          "token": "the",
+          "count": 192,
+          "rate": 0.0401673640167364
+        },
+        {
+          "token": "to",
+          "count": 156,
+          "rate": 0.032635983263598324
+        },
+        {
+          "token": "and",
+          "count": 150,
+          "rate": 0.03138075313807531
+        },
+        {
+          "token": "of",
+          "count": 129,
+          "rate": 0.02698744769874477
+        },
+        {
+          "token": "a",
+          "count": 74,
+          "rate": 0.015481171548117154
+        },
+        {
+          "token": "in",
+          "count": 71,
+          "rate": 0.014853556485355648
+        },
+        {
+          "token": "I",
+          "count": 53,
+          "rate": 0.011087866108786612
+        },
+        {
+          "token": "will",
+          "count": 51,
+          "rate": 0.010669456066945606
+        },
+        {
+          "token": "is",
+          "count": 50,
+          "rate": 0.010460251046025104
+        },
+        {
+          "token": "that",
+          "count": 50,
+          "rate": 0.010460251046025104
+        },
+        {
+          "token": "our",
+          "count": 48,
+          "rate": 0.0100418410041841
+        },
+        {
+          "token": "for",
+          "count": 47,
+          "rate": 0.009832635983263598
+        },
+        {
+          "token": "we",
+          "count": 46,
+          "rate": 0.009623430962343096
+        },
+        {
+          "token": "this",
+          "count": 43,
+          "rate": 0.00899581589958159
+        },
+        {
+          "token": "And",
+          "count": 36,
+          "rate": 0.007531380753138075
+        },
+        {
+          "token": "not",
+          "count": 31,
+          "rate": 0.006485355648535565
+        },
+        {
+          "token": "are",
+          "count": 29,
+          "rate": 0.006066945606694561
+        },
+        {
+          "token": "it",
+          "count": 29,
+          "rate": 0.006066945606694561
+        }
+      ],
+      "top_10_oov_surface_tokens": [
+        {
+          "token": "commissioned",
+          "count": 2
+        },
+        {
+          "token": "dissidents",
+          "count": 2
+        },
+        {
+          "token": "warm",
+          "count": 1
+        },
+        {
+          "token": "discussions",
+          "count": 1
+        },
+        {
+          "token": "formula",
+          "count": 1
+        },
+        {
+          "token": "matches",
+          "count": 1
+        },
+        {
+          "token": "alongside",
+          "count": 1
+        },
+        {
+          "token": "formations",
+          "count": 1
+        },
+        {
+          "token": "Honorable",
+          "count": 1
+        },
+        {
+          "token": "criticisms",
+          "count": 1
+        }
+      ]
+    },
+    "test_LM_hbush.txt": {
+      "tokens": 4728,
+      "unique_surface_tokens": 1419,
+      "oov_tokens": 108,
+      "oov_rate": 0.02284263959390863,
+      "oov_unique_surface_tokens": 108,
+      "absent_from_lm_train_tokens": 415,
+      "absent_from_lm_train_rate": 0.08777495769881556,
+      "known_vocab_but_absent_from_lm_train_tokens": 307,
+      "known_vocab_but_absent_from_lm_train_rate": 0.06493231810490693,
+      "windows_32": 4696,
+      "window_target_occurrences": 150272,
+      "window_oov_target_occurrences": 3456,
+      "js_divergence_from_lm_train_nats": 0.14246546828575468,
+      "add_one_unigram_cross_entropy_nats": 6.522309668969188,
+      "add_one_unigram_perplexity": 680.1474881357013,
+      "top_20_surface_tokens": [
+        {
+          "token": ".",
+          "count": 246,
+          "rate": 0.05203045685279188
+        },
+        {
+          "token": ",",
+          "count": 230,
+          "rate": 0.048646362098138746
+        },
+        {
+          "token": "the",
+          "count": 230,
+          "rate": 0.048646362098138746
+        },
+        {
+          "token": "to",
+          "count": 139,
+          "rate": 0.02939932318104907
+        },
+        {
+          "token": "of",
+          "count": 119,
+          "rate": 0.025169204737732657
+        },
+        {
+          "token": "and",
+          "count": 109,
+          "rate": 0.02305414551607445
+        },
+        {
+          "token": "a",
+          "count": 74,
+          "rate": 0.015651438240270727
+        },
+        {
+          "token": "I",
+          "count": 65,
+          "rate": 0.013747884940778343
+        },
+        {
+          "token": "in",
+          "count": 55,
+          "rate": 0.011632825719120136
+        },
+        {
+          "token": "is",
+          "count": 52,
+          "rate": 0.010998307952622674
+        },
+        {
+          "token": "we",
+          "count": 49,
+          "rate": 0.010363790186125212
+        },
+        {
+          "token": "for",
+          "count": 44,
+          "rate": 0.009306260575296108
+        },
+        {
+          "token": "that",
+          "count": 43,
+          "rate": 0.009094754653130288
+        },
+        {
+          "token": "our",
+          "count": 43,
+          "rate": 0.009094754653130288
+        },
+        {
+          "token": "will",
+          "count": 38,
+          "rate": 0.008037225042301184
+        },
+        {
+          "token": "have",
+          "count": 38,
+          "rate": 0.008037225042301184
+        },
+        {
+          "token": "this",
+          "count": 36,
+          "rate": 0.007614213197969543
+        },
+        {
+          "token": "be",
+          "count": 35,
+          "rate": 0.007402707275803722
+        },
+        {
+          "token": "not",
+          "count": 32,
+          "rate": 0.00676818950930626
+        },
+        {
+          "token": "with",
+          "count": 31,
+          "rate": 0.00655668358714044
+        }
+      ],
+      "top_10_oov_surface_tokens": [
+        {
+          "token": "first-class",
+          "count": 1
+        },
+        {
+          "token": "talent",
+          "count": 1
+        },
+        {
+          "token": "all-volunteer",
+          "count": 1
+        },
+        {
+          "token": "magnificently",
+          "count": 1
+        },
+        {
+          "token": "despots",
+          "count": 1
+        },
+        {
+          "token": "usual",
+          "count": 1
+        },
+        {
+          "token": "dropped",
+          "count": 1
+        },
+        {
+          "token": "heavy",
+          "count": 1
+        },
+        {
+          "token": "slowed",
+          "count": 1
+        },
+        {
+          "token": "Others",
+          "count": 1
+        }
+      ]
+    }
+  }
+}
